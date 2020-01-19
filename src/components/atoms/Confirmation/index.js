@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Check = ({ strokeColor, strokeWidth, duration }) => {
   return <svg width="199" height="133" viewBox="0 0 199 133" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,32 +22,45 @@ const Check = ({ strokeColor, strokeWidth, duration }) => {
   </svg>
 }
 
-const Confirmation = ({ theme, children }) => <div style={{
-  background:  theme.card.backgroundColor || '#242424' ,
-  borderRadius: theme.card.borderRadius || '9px' ,
-  width:  theme.card.width || '495px' ,
-  height:  theme.card.height || '495px' ,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-}}>
-  <div>
-    <Check duration={theme.check.animationDuration}
-              strokeColor={theme.check.strokeColor}
-              strokeWidth={theme.check.strokeWidth}/>
+const Confirmation = ({ theme, children }) => {
+  const [opacity, setOpacity] = useState(0)
+  useEffect(() => {
+      setOpacity(1)
+  }, [])
+
+  return <div style={{
+    transition: 'opacity 300ms ease-in',
+    opacity: opacity,
+    position: 'absolute',
+    left: '50vw',
+    top: '50vh',
+    transform: 'translate(-50%, -50%)',
+    background: theme.card.backgroundColor || '#242424',
+    borderRadius: theme.card.borderRadius || '9px',
+    width: theme.card.width || '495px',
+    height: theme.card.height || '495px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }}>
+    <div>
+      <Check duration={theme.check.animationDuration}
+             strokeColor={theme.check.strokeColor}
+             strokeWidth={theme.check.strokeWidth}/>
+    </div>
+    <div style={{
+      marginTop: theme.text.marginTop || '75px',
+      marginLeft: theme.text.marginLeft || '-20px',
+    }}><span style={{
+      fontFamily: theme.text.fontFamily || 'Roboto',
+      fontStyle: theme.text.fontStyle || 'normal',
+      fontWeight: theme.text.fontWeight || '500',
+      fontSize: theme.text.fontSize || '45px',
+      lineHeight: theme.text.lineHeight || '53px',
+      color: theme.text.color || '#AEAEAE',
+    }}>{children}</span></div>
   </div>
-  <div style={{
-    marginTop: theme.text.marginTop || '75px',
-    marginLeft: theme.text.marginLeft || '-20px',
-  }}><span style={{
-    fontFamily: theme.text.fontFamily ||  'Roboto' ,
-    fontStyle: theme.text.fontStyle || 'normal' ,
-    fontWeight: theme.text.fontWeight || '500' ,
-    fontSize: theme.text.fontSize || '45px' ,
-    lineHeight:  theme.text.lineHeight || '53px' ,
-    color: theme.text.color || '#AEAEAE',
-  }}>{children}</span></div>
-</div>
+}
 
 export default Confirmation
