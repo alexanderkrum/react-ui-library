@@ -2,13 +2,12 @@
 
 ## Screenshot with default settings
 
-![alt screenshot](./success-popup-small.png)
+![alt screenshot](https://github.com/alexanderkrum/react-confirmation-modal/blob/master/src/components/atoms/Confirmation/success-popup-small.png)
 
 ## Usage
 
 ```jsx
 import SuccessPopup from 'react-success-popup'
-
 ;<SuccessPopup>Subscribed</SuccessPopup>
 ```
 
