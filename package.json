@@ -1,7 +1,10 @@
 {
-  "name": "react-app",
+  "name": "react-ui-library",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "alexander krum"
+  },
   "dependencies": {
     "babel-loader": "^8.0.6",
     "react": "^16.10.2",

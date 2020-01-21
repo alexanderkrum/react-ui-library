@@ -1,0 +1,18 @@
+{
+  "name": "react-success-popup",
+  "version": "1.0.5",
+  "description": "A configurable modal for success message",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest index.test.js"
+  },
+  "author": "alexanderkrum",
+  "license": "ISC",
+  "keywords": [
+    "success",
+    "popup",
+    "popup configurable",
+    "react",
+    "animated svg"
+  ]
+}
