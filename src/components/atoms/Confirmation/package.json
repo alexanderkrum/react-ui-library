@@ -1,8 +1,11 @@
 {
   "name": "react-success-popup",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A configurable modal for success message",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/alexanderkrum/react-confirmation-modal/tree/master/src/components/atoms/Confirmation"
+  },
   "scripts": {
     "test": "jest index.test.js"
   },
