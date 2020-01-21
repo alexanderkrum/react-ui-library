@@ -2,7 +2,7 @@
 
 ## Screenshot with default settings
 
-![alt screenshot](https://github.com/alexanderkrum/react-confirmation-modal/blob/master/src/components/atoms/Confirmation/success-popup-small.png)
+![alt screenshot](https://github.com/alexanderkrum/react-ui-library/blob/master/src/components/atoms/Confirmation/success-popup-small.png)
 
 ## Usage
 
